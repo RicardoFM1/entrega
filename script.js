@@ -159,10 +159,7 @@ imprimirinvertido()
 // retorne o seu dígito verificador.
 //  Para encontrar o dígito verificador, siga o exemplo do número 235:
 
-// Somar o número da conta com o seu inverso: 235 + 532 = 767; 
-// Multiplicar cada dígito pela sua ordem posicional (da esquerda para a direita) e 
-// somar estes resultados: 7 * 1 + 6 * 2 + 7 * 3 = 40; O último dígito desse resultado é o dígito verificador da conta:
-//  último dígito de 40 é 0.
+
 
 
 
