@@ -151,7 +151,7 @@ if(numeroCDU > 1000){
         alert(`Seu número invertido é: ${numeroCDUinvertido}`)
     }
 }
-imprimirinvertido()
+imprimirinvertido()...imprimirinvertido.
 
 
 // - Exercício 5
