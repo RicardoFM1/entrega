@@ -137,27 +137,51 @@
 // Entrar com um número no formato CDU (centena, dezena e unidade) e imprimi-lo invertido. 
 // Por exemplo, 123 sairá 321. O número deverá ser armazenado em outra variável antes de ser impresso.
 
-let numeroCDU = prompt("Digite um valor que se encaixe na Centena, Dezena e Unidade:")
-let numeroCDUinvertido = ""
-if(numeroCDU > 1000){
-    alert("Insira um valor menor que 1000!")
-}else if(numeroCDU < 0){
-    alert("Insira um valor maior ou igual a 0!")
-}else{
-    function imprimirinvertido(){
-        for(let i = numeroCDU.length -1; i >= 0; i--){ // length 123 = 3 - 1 = length 2, index 123 = 2, enquanto index(2) >= 0, i--, exemplo: 123; 3(index 2), i--, 2(index 1), i--, 1(index 0), i--
-            numeroCDUinvertido += numeroCDU[i] 
-        }
-        alert(`Seu número invertido é: ${numeroCDUinvertido}`)
-    }
-}
-imprimirinvertido() 
+// let numeroCDU = prompt("Digite um valor que se encaixe na Centena, Dezena e Unidade:")
+// let numeroCDUinvertido = ""
+// if(numeroCDU > 1000){
+//     alert("Insira um valor menor que 1000!")
+// }else if(numeroCDU < 0){
+//     alert("Insira um valor maior ou igual a 0!")
+// }else{
+//     function imprimirinvertido(){
+//         for(let i = numeroCDU.length -1; i >= 0; i--){ // length 123 = 3 - 1 = length 2, index 123 = 2, enquanto index(2) >= 0, i--, exemplo: 123; 3(index 2), i--, 2(index 1), i--, 1(index 0), i--
+//             numeroCDUinvertido += numeroCDU[i] 
+//         }
+//         alert(`Seu número invertido é: ${numeroCDUinvertido}`)
+//     }
+// }
+// imprimirinvertido() 
 
 
 // - Exercício 5
 // Criar um aplicativo que, dado um número de conta corrente com três dígitos, 
 // retorne o seu dígito verificador.
 //  Para encontrar o dígito verificador, siga o exemplo do número 235:
+
+// Somar o número da conta com o seu inverso: 235 + 532 = 767; 
+// Multiplicar cada dígito pela sua ordem posicional (da esquerda para a direita) e 
+// somar estes resultados: 7 * 1 + 6 * 2 + 7 * 3 = 40; O último dígito desse resultado é o dígito verificador da conta:
+//  último dígito de 40 é 0.
+
+let contacorrente = (prompt("Digite um número de 3 dígitos:"))
+let numerosinvertidos = ""
+if(contacorrente > 1000){
+        alert("Insira um valor menor que 1000!")
+    }else if(contacorrente < 0){
+        alert("Insira um valor maior ou igual a 0!")
+    }else{
+function descobrirocodigoverificador(){
+     
+for(let i = contacorrente.length -1; i >= 0; i--){
+    numerosinvertidos += contacorrente[i]
+    alert(`SDD: ${numerosinvertidos}`)
+    
+    
+}
+}
+descobrirocodigoverificador()
+}
 
 
 
