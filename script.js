@@ -127,7 +127,11 @@
 // ela cobra por cada aluguel, mostrando as informações pedidas a seguir:
 
 // Sabendo que um terço das fitas são alugadas por mês, exiba o faturamento anual da locadora; 
-// Quando o cliente atrasa a entrega, é cobrada uma multa de 10% sobre o valor do aluguel. Sabendo que um décimo das fitas alugadas no mês são devolvidas com atraso, calcule o valor ganho com multas por mês; Sabendo ainda que 2% das fitas se estragam ao longo do ano, e um décimo do total é comprado para reposição, exiba a quantidade de fitas que a locadora terá no final do ano.
+// Quando o cliente atrasa a entrega, é cobrada uma multa de 10% sobre o valor do aluguel. 
+// Sabendo que um décimo das fitas alugadas no mês são devolvidas com atraso, 
+// calcule o valor ganho com multas por mês; Sabendo ainda que 2% das fitas se estragam ao longo do ano, 
+// e um décimo do total é comprado para reposição, exiba a quantidade de fitas que a 
+// locadora terá no final do ano.
 
 // - Exercício 4
 // Entrar com um número no formato CDU (centena, dezena e unidade) e imprimi-lo invertido. 
@@ -151,7 +155,8 @@ imprimirinvertido()
 
 
 // - Exercício 5
-// Criar um aplicativo que, dado um número de conta corrente com três dígitos, retorne o seu dígito verificador.
+// Criar um aplicativo que, dado um número de conta corrente com três dígitos, 
+// retorne o seu dígito verificador.
 //  Para encontrar o dígito verificador, siga o exemplo do número 235:
 
 // Somar o número da conta com o seu inverso: 235 + 532 = 767; 
