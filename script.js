@@ -77,18 +77,25 @@
 // O valor em reais de cada quilowatt; O valor em reais a ser pago; 
 // O novo valor a ser pago por essa residência com um desconto de 10%.
 
-let valordosalariominimo = parseFloat(prompt("Digite o salário minimo:".toFixed(2)))
-let quantidadedewattsporresidencia = parseFloat(prompt("Digite a quantidade de watts por residencia:".toFixed(2)))
-function calcularvalordosalariominimoewattsporresidencia(){
-    partedeumsalariominimo = valordosalariominimo / 7
-    valorporquilowatt= partedeumsalariominimo / 100
+let valordosalariominimo = parseFloat(prompt("Digite o salário minimo:")).toFixed(2)
+let quantidadedewattsporresidencia = parseFloat(prompt("Digite a quantidade de watts por residencia:")).toFixed(2)
+if(isNaN (valordosalariominimo) || isNaN (quantidadedewattsporresidencia)){
+    alert("Digite um valor numérico!")
+}else{
+function calcularumsetimovalorporwattevalornovocomdesconto(){
+let valorporquilowatt = (valordosalariominimo / 7) / 100 
+let valornovoapagar = quantidadedewattsporresidencia * valorporquilowatt
+let valornovoparapagarcomdesconto = valornovoapagar * 0.9
 
     
 
+    
     alert(`O valor em reais de cada quilowatt é: R$ ${valorporquilowatt.toFixed(2)}`)
+    alert(`O valor novo a pagar sem desconto é de: R$ ${valornovoapagar.toFixed(2)}`)
+    alert(`O valor novo a pagar com desconto é de: R$ ${valornovoparapagarcomdesconto.toFixed(2)}`)
 }
-calcularvalordosalariominimoewattsporresidencia()
-
+calcularumsetimovalorporwattevalornovocomdesconto()
+}
 
 
 
