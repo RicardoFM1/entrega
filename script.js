@@ -77,25 +77,25 @@
 // O valor em reais de cada quilowatt; O valor em reais a ser pago; 
 // O novo valor a ser pago por essa residência com um desconto de 10%.
 
-let valordosalariominimo = parseFloat(prompt("Digite o salário minimo:")).toFixed(2)
-let quantidadedewattsporresidencia = parseFloat(prompt("Digite a quantidade de watts por residencia:")).toFixed(2)
-if(isNaN (valordosalariominimo) || isNaN (quantidadedewattsporresidencia)){
-    alert("Digite um valor numérico!")
-}else{
-function calcularumsetimovalorporwattevalornovocomdesconto(){
-let valorporquilowatt = (valordosalariominimo / 7) / 100 
-let valornovoapagar = quantidadedewattsporresidencia * valorporquilowatt
-let valornovoparapagarcomdesconto = valornovoapagar * 0.9
+// let valordosalariominimo = parseFloat(prompt("Digite o salário minimo:")).toFixed(2)
+// let quantidadedewattsporresidencia = parseFloat(prompt("Digite a quantidade de watts por residencia:")).toFixed(2)
+// if(isNaN (valordosalariominimo) || isNaN (quantidadedewattsporresidencia)){
+//     alert("Digite um valor numérico!")
+// }else{
+// function calcularumsetimovalorporwattevalornovocomdesconto(){
+// let valorporquilowatt = (valordosalariominimo / 7 ) / quantidadedewattsporresidencia
+// let valornovoapagar = quantidadedewattsporresidencia * valorporquilowatt
+// let valornovoparapagarcomdesconto = valornovoapagar * 0.9
 
     
 
     
-    alert(`O valor em reais de cada quilowatt é: R$ ${valorporquilowatt.toFixed(2)}`)
-    alert(`O valor novo a pagar sem desconto é de: R$ ${valornovoapagar.toFixed(2)}`)
-    alert(`O valor novo a pagar com desconto é de: R$ ${valornovoparapagarcomdesconto.toFixed(2)}`)
-}
-calcularumsetimovalorporwattevalornovocomdesconto()
-}
+//     alert(`O valor em reais de cada quilowatt é: R$ ${valorporquilowatt.toFixed(2)}`)
+//     alert(`O valor novo a pagar sem desconto é de: R$ ${valornovoapagar.toFixed(2)}`)
+//     alert(`O valor novo a pagar com desconto é de: R$ ${valornovoparapagarcomdesconto.toFixed(2)}`)
+// }
+// calcularumsetimovalorporwattevalornovocomdesconto()
+// }
 
 
 
@@ -108,7 +108,19 @@ calcularumsetimovalorporwattevalornovocomdesconto()
 
 // - Exercício 2
 // Em épocas de pouco dinheiro, os comerciantes estão procurando aumentar suas vendas oferecendo desconto. 
-// Faça um aplicativo que possa receber o valor de um produto e imprima o novo valor tendo em vista que o desconto foi de 9%.
+// Faça um aplicativo que possa receber o valor de um produto e imprima o novo valor tendo 
+// em vista que o desconto foi de 9%. -- 10% = *0.90 9% = 0.91
+
+// let valordoproduto = parseFloat(prompt("Digite o valor do produto:")).toFixed(2)
+// if(isNaN (valordoproduto)){
+//     alert("Insira um valor válido!")
+// }else{
+// function calculardesconto(){
+//     let produtocomdesconto = valordoproduto * 0.91
+//     alert(`Seu produto com um desconto fica: R$ ${produtocomdesconto}`)
+// }
+// calculardesconto()
+// }
 
 // - Exercício 3
 // Criar um aplicativo que leia a quantidade de fitas que uma locadora de vídeo possui e o valor que 
@@ -120,6 +132,23 @@ calcularumsetimovalorporwattevalornovocomdesconto()
 // - Exercício 4
 // Entrar com um número no formato CDU (centena, dezena e unidade) e imprimi-lo invertido. 
 // Por exemplo, 123 sairá 321. O número deverá ser armazenado em outra variável antes de ser impresso.
+
+let numeroCDU = prompt("Digite um valor que se encaixe na Centena, Dezena e Unidade:")
+let numeroCDUinvertido = ""
+if(numeroCDU > 1000){
+    alert("Insira um valor menor que 1000!")
+}else if(numeroCDU < 0){
+    alert("Insira um valor maior ou igual a 0!")
+}else{
+    function imprimirinvertido(){
+        for(let i = numeroCDU.length -1; i >= 0; i--){ // length 123 = 3 - 1 = length 2, index 123 = 2, enquanto index(2) >= 0, i--, exemplo: 123; 3(index 2), i--, 2(index 1), i--, 1(index 0), i--
+            numeroCDUinvertido += numeroCDU[i] 
+        }
+        alert(`Seu número invertido é: ${numeroCDUinvertido}`)
+    }
+}
+imprimirinvertido()
+
 
 // - Exercício 5
 // Criar um aplicativo que, dado um número de conta corrente com três dígitos, retorne o seu dígito verificador.
