@@ -133,6 +133,24 @@
 // e um décimo do total é comprado para reposição, exiba a quantidade de fitas que a 
 // locadora terá no final do ano.
 
+let fitas = parseInt(prompt("insira a quantidades de fitas da locadora"))
+let aluguel = parseInt(prompt("insira o valor do aluguel das fitas"))
+if(!isNaN(fitas) && aluguel > 0){
+    let aluguelpormes = fitas / 3 
+    let faturamentoanual = aluguelpormes * 12;
+
+    alert(`faturamento anual: R$ ${faturamentoanual.toFixed(2)}`)
+    let atrasospormes = aluguelpormes / 10
+    let multaspormes = atrasospormes * (aluguel * 0.1)
+    alert(`multas por mês:R$${multaspormes.toFixed(2)}`)
+    let fitasestragadas = fitas * 0.02
+    let fitasrepostas = fitas / 10
+    let fitasfinal = fitas - fitasestragadas + fitasrepostas
+    alert(`numero de fitas finais: ${fitasfinal}`)
+}else{
+    alert("por favor insira um valor valido")
+}
+
 // - Exercício 4
 // Entrar com um número no formato CDU (centena, dezena e unidade) e imprimi-lo invertido. 
 // Por exemplo, 123 sairá 321. O número deverá ser armazenado em outra variável antes de ser impresso.
@@ -164,33 +182,33 @@
 // somar estes resultados: 7 * 1 + 6 * 2 + 7 * 3 = 40; O último dígito desse resultado é o dígito verificador da conta:
 //  último dígito de 40 é 0.
 
-let contacorrente = parseInt((prompt("Digite um número de 3 dígitos:")))
-let numerosinvertidos = ""
-if(contacorrente > 1000){
-        alert("Insira um valor menor que 1000!")
-    }else if(contacorrente < 100){
-        alert("Insira um valor maior ou igual a 100!")
-    }else if (isNaN(contacorrente) || isNaN (numerosinvertidos)){
-        alert("Digite um valor de 3 dígitos válidos!") 
-}else{
-function descobrirocodigoverificador(){
-let stringconta = String(contacorrente)
+// let contacorrente = parseInt((prompt("Digite um número de 3 dígitos:")))
+// let numerosinvertidos = ""
+// if(contacorrente > 1000){
+//         alert("Insira um valor menor que 1000!")
+//     }else if(contacorrente < 100){
+//         alert("Insira um valor maior ou igual a 100!")
+//     }else if (isNaN(contacorrente) || isNaN (numerosinvertidos)){
+//         alert("Digite um valor de 3 dígitos válidos!") 
+// }else{
+// function descobrirocodigoverificador(){
+// let stringconta = String(contacorrente)
   
-for(let i = stringconta.length -1; i >= 0; i--){
-    numerosinvertidos += stringconta[i]
-}
-soma = parseInt(contacorrente) + parseInt(numerosinvertidos)
-let stringsoma = String(soma)
-let somaverificador = 0
-for(let i = 0; i < stringsoma.length; i++){
-   somaverificador += parseInt(stringsoma[i])*(i+1)
-}
-alert(`O inverso da sua conta corrente é: ${numerosinvertidos}`)
-alert(`A soma do número da conta corrente com o inverso dela é: ${soma}`)
-alert(`O seu código verificador é: ${somaverificador}`)
-}
-descobrirocodigoverificador()
-}
+// for(let i = stringconta.length -1; i >= 0; i--){
+//     numerosinvertidos += stringconta[i]
+// }
+// soma = parseInt(contacorrente) + parseInt(numerosinvertidos)
+// let stringsoma = String(soma)
+// let somaverificador = 0
+// for(let i = 0; i < stringsoma.length; i++){
+//    somaverificador += parseInt(stringsoma[i])*(i+1)
+// }
+// alert(`O inverso da sua conta corrente é: ${numerosinvertidos}`)
+// alert(`A soma do número da conta corrente com o inverso dela é: ${soma}`)
+// alert(`O seu código verificador é: ${somaverificador}`)
+// }
+// descobrirocodigoverificador()
+// }
 
 
 
