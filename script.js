@@ -1,69 +1,3 @@
-// console.log("ai sim")
-
-//FUNCTION, NOME, (PARAMETROS) { ESCOPO }
-// function somar(){
-//     let numa = 1
-//     let numb = 20
-//     const soma = numa + numb
-//     console.log(soma)
-// }
-// const somar = () => {
-//     let numa = 1
-//         let numb = 20
-//         const soma = numa + numb
-//         console.log(soma)
-// }
-// somar()
-
-// (()=>{
-//     console.log("funcao anonima")
-// })()
-// function somar(numa = 0,numb = 0){
-//     // let numa = 1
-//     // let numb = 20
-//     const soma = numa + numb
-//     return soma
-// }
-// const numa = prompt("digite um numero")
-// const numb = prompt("digite um numero")
-// const resultado =  somar(numa,numb)
-// console.log(resultado,"resultado")
-
-// function multiplica(numa,numb){
-//     return numa*numb
-// }
-// const resultadoMultiplicacao = multiplica(3,8)
-// console.log(resultadoMultiplicacao)
-// const listaNumeros =[1,2,4,5,8]
-// const resultLista = multiplcaPorTres(listaNumeros,10)
-
-// function multiplcaPorTres(lista=[],multiplcador){
-//     console.log(lista,"lista parametro",multiplcador)
-//     let aux = []
-//     for(let i = 0; i < lista.length; i++){
-//         aux.push(lista[i]/multiplcador)
-//     }
-//     return aux
-// }
-
-// console.log(resultLista,"lista")
-
-
-// Para concluir os exercícios a seguir, você deverá fazer uso do prompt() e do alert() 
-// para receber os valores e exibir os resultados, respectivamente.
-
-// Exemplo Leia dois números inteiros, a e b, e faça com que eles troquem os valores entre si. Exiba os valores de a e b.
-
-// Resolução
-
-// let a = parseInt(prompt("Insira um valor para a"))
-// let b = parseInt(prompt("Insira um valor para b"))
-// let aux = 0
-// aux = a
-// a = b
-// b = aux
-// alert(`Os valores originais de a e b: ${b}, ${a}. Após a troca são: ${a}, ${b}`)
-// O exercício acima é a base para resolução dos próximos. Não precisa retornar nada no console. Não precisa inicializar as variáveis com valores atribuídos diretamente ao código, a não ser que seja necessário para a conclusão da lógica.
 
 // - Exercício 1
 // Antes do racionamento de energia ser decretado, quase ninguém falava de quilowatts; mas agora, 
@@ -133,23 +67,23 @@
 // e um décimo do total é comprado para reposição, exiba a quantidade de fitas que a 
 // locadora terá no final do ano.
 
-let fitas = parseInt(prompt("insira a quantidades de fitas da locadora"))
-let aluguel = parseInt(prompt("insira o valor do aluguel das fitas"))
-if(!isNaN(fitas) && aluguel > 0){
-    let aluguelpormes = fitas / 3 
-    let faturamentoanual = aluguelpormes * 12;
+// let fitas = parseInt(prompt("insira a quantidades de fitas da locadora"))
+// let aluguel = parseInt(prompt("insira o valor do aluguel das fitas"))
+// if(!isNaN(fitas) && aluguel > 0){
+//     let aluguelpormes = fitas / 3 
+//     let faturamentoanual = aluguelpormes * 12;
 
-    alert(`faturamento anual: R$ ${faturamentoanual.toFixed(2)}`)
-    let atrasospormes = aluguelpormes / 10
-    let multaspormes = atrasospormes * (aluguel * 0.1)
-    alert(`multas por mês:R$${multaspormes.toFixed(2)}`)
-    let fitasestragadas = fitas * 0.02
-    let fitasrepostas = fitas / 10
-    let fitasfinal = fitas - fitasestragadas + fitasrepostas
-    alert(`numero de fitas finais: ${fitasfinal}`)
-}else{
-    alert("por favor insira um valor valido")
-}
+//     alert(`faturamento anual: R$ ${faturamentoanual.toFixed(2)}`)
+//     let atrasospormes = aluguelpormes / 10
+//     let multaspormes = atrasospormes * (aluguel * 0.1)
+//     alert(`multas por mês: R$ ${multaspormes.toFixed(2)}`)
+//     let fitasestragadas = fitas * 0.02
+//     let fitasrepostas = fitas / 10
+//     let fitasfinal = fitas - fitasestragadas + fitasrepostas
+//     alert(`número de fitas finais: ${fitasfinal}`)
+// }else{
+//     alert("insira um valor valido!")
+// }
 
 // - Exercício 4
 // Entrar com um número no formato CDU (centena, dezena e unidade) e imprimi-lo invertido. 
@@ -182,33 +116,35 @@ if(!isNaN(fitas) && aluguel > 0){
 // somar estes resultados: 7 * 1 + 6 * 2 + 7 * 3 = 40; O último dígito desse resultado é o dígito verificador da conta:
 //  último dígito de 40 é 0.
 
-// let contacorrente = parseInt((prompt("Digite um número de 3 dígitos:")))
-// let numerosinvertidos = ""
-// if(contacorrente > 1000){
-//         alert("Insira um valor menor que 1000!")
-//     }else if(contacorrente < 100){
-//         alert("Insira um valor maior ou igual a 100!")
-//     }else if (isNaN(contacorrente) || isNaN (numerosinvertidos)){
-//         alert("Digite um valor de 3 dígitos válidos!") 
-// }else{
-// function descobrirocodigoverificador(){
-// let stringconta = String(contacorrente)
+let contacorrente = parseInt((prompt("Digite um número de 3 dígitos:")))
+let numerosinvertidos = ""
+if(contacorrente > 1000){
+        alert("Insira um valor menor que 1000!")
+    }else if(contacorrente < 100){
+        alert("Insira um valor maior ou igual a 100!")
+    }else if (isNaN(contacorrente) || isNaN (numerosinvertidos)){
+        alert("Digite um valor de 3 dígitos válidos!") 
+}else{
+function descobrirocodigoverificador(){
+let stringconta = String(contacorrente)
   
-// for(let i = stringconta.length -1; i >= 0; i--){
-//     numerosinvertidos += stringconta[i]
-// }
-// soma = parseInt(contacorrente) + parseInt(numerosinvertidos)
-// let stringsoma = String(soma)
-// let somaverificador = 0
-// for(let i = 0; i < stringsoma.length; i++){
-//    somaverificador += parseInt(stringsoma[i])*(i+1)
-// }
-// alert(`O inverso da sua conta corrente é: ${numerosinvertidos}`)
-// alert(`A soma do número da conta corrente com o inverso dela é: ${soma}`)
-// alert(`O seu código verificador é: ${somaverificador}`)
-// }
-// descobrirocodigoverificador()
-// }
+for(let i = stringconta.length -1; i >= 0; i--){
+    numerosinvertidos += stringconta[i]
+}
+soma = parseInt(contacorrente) + parseInt(numerosinvertidos)
+let stringsoma = String(soma)
+let somaverificador = 0
+for(let i = 0; i < stringsoma.length; i++){
+   somaverificador += parseInt(stringsoma[i])*(i+1)
+}
+let codigoverificador = somaverificador % 10;
+alert(`O inverso da sua conta corrente é: ${numerosinvertidos}`)
+alert(`A soma do número da conta corrente com o inverso dela é: ${soma}`)
+alert(`O seu código verificador é: ${codigoverificador}`)
+}
+descobrirocodigoverificador()
+}
+
 
 
 
