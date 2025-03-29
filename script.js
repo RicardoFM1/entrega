@@ -164,21 +164,30 @@
 // somar estes resultados: 7 * 1 + 6 * 2 + 7 * 3 = 40; O último dígito desse resultado é o dígito verificador da conta:
 //  último dígito de 40 é 0.
 
-let contacorrente = (prompt("Digite um número de 3 dígitos:"))
+let contacorrente = parseInt((prompt("Digite um número de 3 dígitos:")))
 let numerosinvertidos = ""
 if(contacorrente > 1000){
         alert("Insira um valor menor que 1000!")
-    }else if(contacorrente < 0){
-        alert("Insira um valor maior ou igual a 0!")
-    }else{
+    }else if(contacorrente < 100){
+        alert("Insira um valor maior ou igual a 100!")
+    }else if (isNaN(contacorrente) || isNaN (numerosinvertidos)){
+        alert("Digite um valor de 3 dígitos válidos!") 
+}else{
 function descobrirocodigoverificador(){
-     
-for(let i = contacorrente.length -1; i >= 0; i--){
-    numerosinvertidos += contacorrente[i]
-    alert(`SDD: ${numerosinvertidos}`)
-    
-    
+let stringconta = String(contacorrente)
+  
+for(let i = stringconta.length -1; i >= 0; i--){
+    numerosinvertidos += stringconta[i]
 }
+soma = parseInt(contacorrente) + parseInt(numerosinvertidos)
+let stringsoma = String(soma)
+let somaverificador = 0
+for(let i = 0; i < stringsoma.length; i++){
+   somaverificador += parseInt(stringsoma[i])*(i+1)
+}
+alert(`O inverso da sua conta corrente é: ${numerosinvertidos}`)
+alert(`A soma do número da conta corrente com o inverso dela é: ${soma}`)
+alert(`O seu código verificador é: ${somaverificador}`)
 }
 descobrirocodigoverificador()
 }
